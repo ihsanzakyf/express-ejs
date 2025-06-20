@@ -1,0 +1,111 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="container">
+    <div class="row py-4">
+        <div class="col-lg-12 col-md-6 mb-3">
+            <% if (data.img) { %>
+            <img
+                src="<%= data.img %>"
+                alt="<%= data.title %>"
+                class="img-fluid rounded" />
+            <% } %>
+            <h1>Tag <%= data.title %></h1>
+            <h3><%= data.description %></h3>
+            <p>Followers: <%= data.followers %></p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Quas molestiae repudiandae eligendi sed quos, inventore,
+                dolorum commodi ipsum laborum quia architecto tenetur a
+                debitis, alias totam blanditiis! Deleniti, aliquam quo.
+                Quibusdam, ea! Iste est, similique quidem incidunt assumenda
+                totam, nisi delectus sapiente labore id, minima quia
+                veritatis qui maiores. Aut, molestias mollitia! Delectus
+                debitis facere nulla, hic cum consequatur recusandae!
+                Tempora molestiae, ea quod veritatis blanditiis fuga quia
+                deleniti velit architecto atque quis quaerat odit quos
+                voluptatum est dolor, vero illo alias dolorem iusto qui,
+                corrupti et! Iste, hic qui? Omnis, aut sunt voluptatem
+                accusantium excepturi voluptas aperiam cum ab sit dolor
+                distinctio, ut quas eveniet, autem dicta quidem. Mollitia
+                laudantium voluptas aliquam consectetur, quibusdam aut ad
+                voluptate deserunt veritatis? Sint quam dolore odit,
+                expedita magnam consectetur nihil architecto quis velit
+                labore aliquam omnis, ad dolorum culpa molestiae quos nam
+                recusandae officia. Minima asperiores beatae id molestias
+                expedita ducimus delectus. Facere fugiat cumque ipsam alias
+                ipsa excepturi sed eos mollitia nulla doloremque, vitae
+                tempora aspernatur, aperiam ut? Quis beatae nemo repudiandae
+                reiciendis numquam optio. Ad corporis aperiam facere fugit
+                ab. Pariatur exercitationem perferendis saepe ipsam eaque
+                minima officiis debitis accusantium? Modi consectetur esse,
+                impedit libero, cum odio doloribus quidem praesentium nam
+                aliquid atque cumque, deserunt nisi illum nulla beatae hic.
+                Aliquam accusantium neque voluptates necessitatibus ad
+                molestias doloremque voluptate explicabo veniam atque soluta
+                alias qui nesciunt quaerat quos architecto, molestiae,
+                maxime labore odit nihil quae id. Sit excepturi aspernatur
+                ducimus! Odio eaque consectetur dolorum adipisci itaque
+                quasi excepturi! Aliquid autem quaerat placeat illo sed.
+                Fuga, nesciunt iusto voluptatibus alias quaerat dolor
+                asperiores dolores et. Vitae hic cupiditate iure soluta
+                doloribus? Consequuntur, omnis illo sed eligendi totam
+                veritatis nam error quae ut ea tenetur dolore. Esse error
+                deserunt sint tenetur non modi neque, quae ipsum libero
+                consequuntur, enim ad inventore pariatur. Architecto eius
+                facilis velit rerum quidem. Mollitia aspernatur ratione
+                voluptatum consectetur recusandae perferendis quod enim,
+                iure rem expedita repellendus illo ad distinctio vero nulla
+                id delectus sed. Tempora, consectetur aut? Corporis
+                recusandae laborum labore aliquam consequuntur? Quam
+                consequatur corrupti amet provident, dignissimos hic vero,
+                obcaecati iste neque quae voluptatum sapiente id commodi
+                repellendus labore quos. Cupiditate voluptatum quae
+                exercitationem. Iste. Nobis itaque similique ipsam sequi
+                possimus placeat dolorem totam rem voluptate aut. Totam,
+                corporis? Harum minima voluptatum reiciendis aliquam fugiat
+                nam, recusandae dolores nulla et tempora? Ab quam magnam
+                alias? Id, recusandae sed. Cupiditate tempore deleniti fuga
+                perspiciatis doloribus voluptatum perferendis fugiat, dolore
+                iure, laudantium dignissimos laboriosam. Soluta,
+                voluptatibus commodi. Id ullam sed nemo, repellendus ex
+                cumque amet deleniti illo. Earum aliquam quia culpa
+                obcaecati. Officiis est beatae amet dignissimos, aliquam
+                minus at quos inventore quaerat quia, eaque minima nam quae,
+                fugiat eius suscipit laudantium molestias voluptatibus
+                explicabo. Possimus, facilis. At, ratione. Expedita
+                exercitationem odit ducimus pariatur deleniti, sequi iure
+                esse eum natus aspernatur perspiciatis sed quod, eius illo
+                voluptas necessitatibus dignissimos laborum rerum obcaecati
+                ipsum in consequatur repellendus molestias. Eos maxime non
+                earum eum dolor pariatur aliquam beatae animi totam adipisci
+                quo quas id ratione cum facilis, accusantium error
+                blanditiis. Laboriosam, minus obcaecati temporibus esse sed
+                iste quo beatae? Ullam, adipisci iste illum fuga totam hic,
+                iusto soluta earum id dignissimos quasi quaerat alias
+                necessitatibus odit tempora quod facilis porro odio error
+                incidunt, quas quisquam sunt. In, rerum iste? Atque quod
+                explicabo dolorem sed dolore eius voluptatem libero quae,
+                culpa voluptas illo, autem porro, quasi accusantium? Iure
+                voluptas consectetur corrupti ea, expedita voluptate nam
+                quibusdam, optio, esse accusamus impedit? Impedit eveniet
+                cum unde a aliquid excepturi error, beatae, in, rerum
+                accusantium recusandae! Excepturi eveniet adipisci maiores
+                dignissimos temporibus maxime nulla animi quod tempore
+                blanditiis, eius suscipit itaque dolore ullam.
+            </p>
+            <hr />
+        </div>
+
+        <div class="col-lg-12 col-md-6 d-flex flex-column align-items-center justify-content-start">
+            <% data.posts.forEach((post, index) => { %>
+            <article class="border p-3 rounded shadow-sm mb-3 w-100">
+                <p class="mb-1 fw-bold"><%= post.title %></p></p>
+                <p class="mb-0 text-muted">by <%= post.author %></p>
+            </article>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
